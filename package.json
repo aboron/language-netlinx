@@ -1,11 +1,11 @@
 {
-  "name": "language-source",
+  "name": "language-netlinx",
   "version": "0.0.1",
   "engines": {
     "atom": "*",
     "node": "*"
   },
-  "description": "Source code support in Atom",
+  "description": "NetLinx source code support in Atom",
   "homepage": "https://github.com/aboron/language-netlinx/wiki",
   "repository": {
     "type": "git",

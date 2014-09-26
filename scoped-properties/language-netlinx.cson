@@ -1,4 +1,4 @@
-'.source':
+'.source.axs, .source.axi':
   'editor':
     'commentStart': '(*'
     'commentEnd': '*)'

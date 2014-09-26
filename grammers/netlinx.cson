@@ -1,0 +1,120 @@
+'scopeName': 'source.axs'
+'fileTypes': [
+  'axs'
+  'axi'
+]
+'firstLineMatch': '^PROGRAM_NAME|^MODULE_NAME'
+'name': 'NetLinx Source'
+'patterns': [
+  {
+    'match': '\\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?)((e|E)[+-]?[0-9]+)?)\\b'
+    'name': 'constant.numeric.axs'
+  }
+  {
+    'begin': '\''
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.axs'
+    'end': '\''
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.axs'
+    'name': 'string.quoted.single.axs'
+    'patterns': [
+      {
+        'match': '\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)'
+        'name': 'constant.character.escape.axs'
+      }
+    ]
+  }
+  {
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.axs'
+    'end': '"'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.axs'
+    'name': 'string.quoted.double.axs'
+    'patterns': [
+      {
+        'match': '\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]|37[0-7]?|[4-7][0-7]?|.)'
+        'name': 'constant.character.escape.axs'
+      }
+    ]
+  }
+  {
+    'begin': '\\(\\*\\*(?!/)|/\\*\\*(?!/)'
+    'captures':
+      '0':
+        'name': 'punctuation.definition.comment.axs'
+    'end': '\\*\\)|\\*/'
+    'name': 'comment.block.documentation.axs'
+  }
+  {
+    'begin': '(^[ \\t]+)?(?=//)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.whitespace.comment.leading.axs'
+    'end': '(?!\\G)'
+    'patterns': [
+      {
+        'begin': '//'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.axs'
+        'end': '\\n'
+        'name': 'comment.line.double-slash.axs'
+      }
+    ]
+  }
+  {
+    'match': '(?<!\\.)\\b(integer|sinteger|long|slong|char|widechar|float|double|dev|devchan|devlev)(?!\\s*:)\\b'
+    'name': 'storage.type.axs'
+  }
+  {
+    'match': '(?<!\\.)\\b(constant|local_var|persistent|stack_var|volatile|non_volatile)(?!\\s*:)\\b'
+    'name': 'storage.modifier.axs'
+  }
+  {
+    'match': '(?<!\\.)\\b(switch|case|break|default|if|else|for|if|return|medium_while|long_while|select|active)(?!\\s*:)\\b'
+    'name': 'keyword.control.axs'
+  }
+  {
+    'match': '(?<!\\.)\\btrue(?!\\s*:)\\b'
+    'name': 'constant.language.boolean.true.axs'
+  }
+  {
+    'match': '(?<!\\.)\\bfalse(?!\\s*:)\\b'
+    'name': 'constant.language.boolean.false.axs'
+  }
+  {
+    'match': '\\*|\\-\\-|\\-|\\+\\+|\\+|==|=|<>|<=|>=|<<|LSHIFT|>>|RSHIFT|<|>|~|BNOT|!|NOT|&|BAND|&&|AND|\\||BOR|\\|\\||OR|\\+=|\\-=|\\^|BXOR|\\^\\^|XOR|%|MOD'
+    'name': 'keyword.operator.axs'
+  }
+  {
+    'match': '\\;'
+    'name': 'punctuation.terminator.statement.axs'
+  }
+  {
+    'match': ',[ |\\t]*'
+    'name': 'meta.delimiter.object.comma.axs'
+  }
+  {
+    'match': '\\.'
+    'name': 'meta.delimiter.method.period.axs'
+  }
+  {
+    'match': '\\{|\\}'
+    'name': 'meta.brace.curly.axs'
+  }
+  {
+    'match': '\\(|\\)'
+    'name': 'meta.brace.round.axs'
+  }
+  {
+    'match': '\\[|\\]'
+    'name': 'meta.brace.square.axs'
+  }
+]
