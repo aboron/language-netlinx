@@ -1,4 +1,5 @@
-Copyright (c) 2014 GitHub Inc.
+NetLinx related portions:
+Copyright (c) 2014 Greg Gaskill
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -20,12 +21,8 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 --------------------------------------------------------------------
+Base template structure (atom/language-source):
+Copyright (c) 2014 GitHub Inc.
 
-This package was derived from a TextMate bundle located at
-https://github.com/textmate/source.tmbundle and distributed under the following
-license, located in `README.mdown`:
-
-Permission to copy, use, modify, sell and distribute this
-software is granted. This software is provided "as is" without
-express or implied warranty, and with no claim as to its
-suitability for any purpose.
+See their project for further license details:
+https://github.com/atom/language-source
