@@ -1,6 +1,5 @@
-'.source.axs, .source.axi':
+'.source.axs':
   'editor':
-    'commentStart': '(*'
-    'commentEnd': '*)'
+    'commentStart': '// '
     'increaseIndentPattern': '^.*(\\{\\}?[^}"\']*|\\([^)"\']*)$'
     'decreaseIndentPattern': '^(.*\\*/)?\\s*\\}[;\\s]*$'

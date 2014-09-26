@@ -3,7 +3,7 @@
   'axs'
   'axi'
 ]
-'firstLineMatch': '^PROGRAM_NAME|^MODULE_NAME'
+'firstLineMatch': '^PROGRAM_NAME.*|^MODULE_NAME.*'
 'name': 'NetLinx Source'
 'patterns': [
   {

@@ -15,14 +15,14 @@ describe "NetLinx grammar", ->
   describe "strings", ->
     it "tokenizes single-line strings", ->
       delimsByScope =
-        "string.quoted.double.js": '"'
-        "string.quoted.single.js": "'"
+        "string.quoted.double.axs": '"'
+        "string.quoted.single.axs": "'"
 
       for scope, delim of delimsByScope
         {tokens} = grammar.tokenizeLine(delim + "x" + delim)
         expect(tokens[0].value).toEqual delim
-        expect(tokens[0].scopes).toEqual ["source.js", scope, "punctuation.definition.string.begin.js"]
+        expect(tokens[0].scopes).toEqual ["source.axs", scope, "punctuation.definition.string.begin.axs"]
         expect(tokens[1].value).toEqual "x"
-        expect(tokens[1].scopes).toEqual ["source.js", scope]
+        expect(tokens[1].scopes).toEqual ["source.axs", scope]
         expect(tokens[2].value).toEqual delim
-        expect(tokens[2].scopes).toEqual ["source.js", scope, "punctuation.definition.string.end.js"]
+        expect(tokens[2].scopes).toEqual ["source.axs", scope, "punctuation.definition.string.end.axs"]
