@@ -1,5 +1,13 @@
-'.source.axs':
+'.source.axs .source.axi':
   'editor':
-    'commentStart': '// '
-    'increaseIndentPattern': '^.*(\\{\\}?[^}"\']*|\\([^)"\']*)$'
-    'decreaseIndentPattern': '^(.*\\*/)?\\s*\\}[;\\s]*$'
+    'foldEndPattern': '^\\s*\\}'
+    'increaseIndentPattern': '(?x)
+       ^ .* \\{ \\s* $
+      |^ \\s* if \\s* \\( (?!.*?(\\belse\\b|;\\s*$))
+      |^ \\s* \\}? \\s* else \\s*$
+      |^ \\s* (for|while) \\s* \\(
+      |^ \\s* (switch|select) \\s*:
+      |^ \\s* (case|active) \\s*:
+      '
+    'decreaseIndentPattern': '(?x)
+       ^ \\s* ( (?! \\S.* /[*] ) .* [*]/ \\s* )? \\}'
